@@ -361,6 +361,11 @@ export default function Footer() {
                     اتصل بنا
                   </a>
                 </li>
+                <li>
+                  <a href="/worker-profile" className="text-gray-300 hover:text-yellow-400 transition duration-300">
+                    ملف العامل
+                  </a>
+                </li>
               </ul>
             </div>
 
