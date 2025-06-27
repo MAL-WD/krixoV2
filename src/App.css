@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-blue:#0143B1;
+  --color-black:#010208;
+  --color-white:#FCFBF8;
+  --color-yellow:#FAD513;
+}
+@font-face {
+  font-family: 'Greta-Bolder';
+  src: url('./fonts/Greta-Arabic-AR-LT-Black.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: bolder;
+  letter-spacing: 4px;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Greta-Bold';
+  src: url('./fonts/Greta-Arabic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+/* @font-face {
+  font-family: 'GretaArabic';
+  src: url('/fonts/Greta-Arabic-AR-LT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  /* text-align: center; */
+  font-family: 'Greta-Bolder';
+  font-family: "Rubik", sans-serif;   
+}
+.font-seriff{
+
+  font-family: 'Greta-Bolder';
+  font-weight: 500;
+}
+h1{
+  font-family: 'Greta-Bolder';
+}
+h2{
+  font-family: 'Greta-bolder';
+}
+.landing-page,footer{
+  background-image: url("./assets/background1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.service{
+  background:linear-gradient(180deg, #0143B1 0%, #4891ff7c 100%);
+
+  transition-duration: 0.8s;
+}
+.service:hover{
+  background:linear-gradient(180deg, #0143B1 0%, #4891FF 100%)
+} 
+.faqs {
+  width: 100%;
+  max-width: 1000px;
+  padding: 15px;
+}
+
+.faqs .faq {
+  margin: 30px;
+  /* padding: 15px; */
+  /* background: #fff; */
+  /* border-radius: 45px; */
+  border: 1px solid #0143B1;
+  /* background: var(--Primary, #3B55E6); */
+  box-shadow: 0px 5px 0px 0px #0142b19c;
+  transition: all 0.4s ease;
+
+}
+
+.faqs .faq .faq-question {
+  position: relative;
+  font-size: 20px;
+  padding-right: 80px;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+  content: "+";
+  position: absolute;
+  color: #FAD513;
+  background-color: #fad3135b;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 100PX;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border: 1px solid #FAD513;
+  transition: all 0.2s ease;
+}
+
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqs .faq.open .faq-question {
+  margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-question::after {
+  content: "-";
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
